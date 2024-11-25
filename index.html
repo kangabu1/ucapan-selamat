@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Terima Kasih Guruku</title>
+    <style>
+        /* Reset dan styling dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee); /* Soft Gradient */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 700px;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: #FF69B4; /* Soft pink */
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Glow effect */
+            animation: textGlow 1.5s ease-in-out infinite alternate; /* Animated glow */
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #FF6347;
+            text-transform: uppercase;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #FF6347;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #FF4500;
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+
+        /* Animasi fade-in untuk container */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animasi glow pada teks */
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 10px #FF69B4, 0 0 20px #FF69B4, 0 0 30px #FF69B4;
+            }
+            100% {
+                text-shadow: 0 0 25px #FF69B4, 0 0 40px #FF69B4, 0 0 60px #FF69B4;
+            }
+        }
+
+        /* Efek bunga animasi */
+        .flower {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Flower.svg/200px-Flower.svg.png');
+            background-size: cover;
+            animation: flowerAnimation 3s linear infinite;
+            opacity: 0.7;
+        }
+
+        /* Animasi bunga terbang */
+        @keyframes flowerAnimation {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(200px) rotate(180deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-50px) rotate(360deg);
+                opacity: 0.7;
+            }
+        }
+
+        /* Partikel animasi */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background-color: #FF6347;
+            border-radius: 50%;
+            animation: particleAnimation 2s linear infinite;
+        }
+
+        /* Animasi partikel */
+        @keyframes particleAnimation {
+            0% {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(200px, 200px);
+                opacity: 0;
+            }
+        }
+
+        /* Responsif untuk perangkat mobile */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            button {
+                width: 100%;
+                padding: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Partikel animasi -->
+    <div class="particles">
+        <div class="particle" style="width: 15px; height: 15px; top: 10%; left: 10%; animation-duration: 3s;"></div>
+        <div class="particle" style="width: 20px; height: 20px; top: 20%; left: 20%; animation-duration: 2.5s;"></div>
+        <div class="particle" style="width: 10px; height: 10px; top: 30%; left: 30%; animation-duration: 3s;"></div>
+        <div class="particle" style="width: 18px; height: 18px; top: 40%; left: 40%; animation-duration: 2.8s;"></div>
+    </div>
+
+    <!-- Bunga animasi -->
+    <div class="flower"></div>
+
+    <!-- Container utama untuk ucapan -->
+    <div class="container">
+        <h1>Terima Kasih, Guruku!</h1>
+        <p>
+            Untuk semua ilmu, kesabaran, dan cinta yang telah engkau berikan, <span class="highlight">terima kasih</span> yang tak terhingga.
+            <br>Kamu adalah inspirasi kami untuk menjadi yang terbaik.
+        </p>
+        <p>
+            Semoga setiap langkahmu dipenuhi dengan kebahagiaan dan keberkahan. 
+            <br>Teruslah menjadi cahaya yang menerangi jalan kami!
+        </p>
+        <button onclick="showMessage()">Terima Kasih, Guru!</button>
+        <p id="message" style="font-size: 18px; color: #333; margin-top: 20px;"></p>
+        <a href="https://wa.me/085693448227?text=Terima%20kasih%20telah%20menghubungi%20kami!" target="_blank">
+            <button style="padding: 10px 20px; background-color: #25D366; color: white; border: none; border-radius: 5px;">
+                pesan untuk saya
+            </button>
+        </a>
+    </div>
+
+    <script>
+        function showMessage() {
+            // Menampilkan pesan terima kasih setelah tombol diklik
+            const message = document.getElementById("message");
+            message.innerHTML = "Terima kasih, Guru! Anda adalah inspirasi kami!";
+        }
+    </script>
+</body>
+</html>

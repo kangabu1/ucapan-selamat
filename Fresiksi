@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediksi Spaceman</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background-color: #f4f4f4; }
+    input, button { padding: 10px; margin: 5px; width: 80%; }
+    button { cursor: pointer; background-color: #007bff; color: white; border: none; }
+    #hasil { font-size: 1.5em; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h2>Prediksi Multiplier Spaceman</h2>
+  <p>Masukkan histori multiplier (pisahkan dengan koma):</p>
+  <input type="text" id="histori" placeholder="Contoh: 1.5, 2.0, 1.2, 3.4">
+  <button onclick="prediksi()">Prediksi</button>  <h3>Hasil Prediksi:</h3>
+  <p id="hasil">-</p>  <script>
+    function prediksi() {
+      const input = document.getElementById('histori').value;
+      const angka = input.split(',').map(x => parseFloat(x.trim())).filter(x => !isNaN(x));
+
+      if (angka.length < 2) {
+        document.getElementById('hasil').innerText = "Minimal masukkan 2 angka!";
+        return;
+      }
+
+      const rataRata = angka.reduce((a, b) => a + b, 0) / angka.length;
+      const bias = (Math.random() - 0.5) * 0.4; // random kecil sebagai variasi
+      const prediksi = (rataRata + bias).toFixed(2);
+
+      document.getElementById('hasil').innerText = `Prediksi multiplier berikutnya: ${prediksi}x`;
+    }
+  </script></body>
+</html>
